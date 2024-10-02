@@ -1,0 +1,29 @@
+.btn {
+    border-radius: 4px;
+    padding: 12px 24px;
+    width: 157px;
+    height: 44px;
+
+    background: #1a3e3e;
+
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: 0.01em;
+    color: #fdfdfd;
+
+    transition: all 0.4s ease-in;
+    
+    &--big{
+        border-radius: 4px;
+        padding: 16px 36px;
+        width: 213px;
+        height: 52px;
+    }
+
+    &:hover{
+        background: #fdfdfd;
+        color: #1a3e3e;
+    }
+}

@@ -1,0 +1,138 @@
+.form-transperent {
+	display: flex;
+	justify-content: center;
+	padding: 40px 42px;
+	gap: 24px;
+
+	width: 100%;
+	height: 161px;
+	border-radius: 10px;
+
+	backdrop-filter: blur(6px);
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown__btn, .date__input {
+	padding: 0px 16px;
+	margin-bottom: 8px;
+	width: 270px;
+	height: 52px;
+
+	border-radius: 8px;
+	border: 1px solid #e1e3e4;
+	
+	text-align: left;
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 150%;
+	color: #fdfdfd;
+
+	cursor: pointer;
+	appearance: none;
+
+	&::placeholder{
+		color: #fdfdfd;
+	}
+}
+
+.dropdown__wrapper {
+	position: relative;
+	width: 270px;
+
+	span{
+		margin-left: 16px;
+
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 150%;
+		color: #fdfdfd;
+	}
+}
+
+.date__wrapper {
+	span{
+		margin-left: 16px;
+
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 150%;
+		color: #fdfdfd;
+	}
+}
+
+.date {
+	display: flex;
+    flex-direction: column;
+}
+
+.dropdown__wrapper::after {
+	content: "";
+
+	position: absolute;
+	top: 26px;
+	right: 15px;
+	transform: translateY(-50%);
+
+	display: block;
+	width: 18px;
+	height: 10px;
+
+	background-image: url('./../../img/arrow.svg');
+	background-position: center center; /* x y */
+	background-repeat: no-repeat;
+
+	pointer-events: none;
+}
+
+.dropdown__list {
+    display: none;
+
+    position: absolute;
+    left: 0;
+    top: 52px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+    border: 1px solid rgb(0, 0, 0);
+    overflow: hidden;
+
+    border-radius: 6px;
+    width: 100%;
+
+    z-index: 1;
+
+    
+}
+
+.dropdown__list--visible{
+    display: block;
+}
+
+.dropdown__list-item {
+	margin: 0;
+	padding: 0;
+    padding: 13px 20px;
+
+    background: #e1e3e4;
+    color: #000000;
+    cursor: pointer;
+
+    &:hover{
+        transition: all 0.2s ease-in;
+        
+        background: #1a3e3e;
+        color: #e1e3e4;
+    }
+}
+
+.dropdown__input-hiden{
+    display: none;
+}
